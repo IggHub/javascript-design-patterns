@@ -1,13 +1,14 @@
-function Chocolate(type, percent) {
-  this.type = type
-  this.percent = percent
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
 }
 
-Chocolate.prototype.chocolatey = function() {
-  return (
-    "I am a " + this.percent + "% " + this.type + " chocolate"
-  )
+Person.prototype.introduceMe = function(){
+  return `The name is ${this.firstName} ${this.lastName}`
 }
 
-const darkChocolate = new Chocolate("dark", 95)
-console.log(darkChocolate.chocolatey())
+const John = new Person(`John`, `Smith`)
+const Abby = new Person(`Abby`, `Smith`)
+
+console.log(John.introduceMe())
+console.log(Abby.introduceMe())
