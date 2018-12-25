@@ -52,6 +52,9 @@ var module = (function() {
     return {
  
         facade: function( args ) {
+            // when module.facade is called,
+            // it runs several lines of code
+            // setting, getting, and run checking
             _private.set(args.val);
             _private.get();
             if ( args.run ) {
